@@ -1,0 +1,13 @@
+import sys
+
+f=open(sys.argv[1]);
+
+for line in f:
+	pair=line.split(",")
+	x=int(pair[0])
+	n=int(pair[1])
+	count=1
+	while(n*count<x):
+		count=count+1;
+	print n*count
+	

@@ -1,0 +1,28 @@
+import sys
+
+def selfdesc(num):
+	selfdes=1
+	lst=[]
+	result={}
+	x=0
+	while(num>0):
+		x=num%10
+		lst.append(x);
+		num=num/10
+	lst.reverse()
+	size=len(lst)
+	count=0
+	while(count<size):
+		if(lst[count]==lst.count(count)):
+			count=count+1;
+			continue;
+		else:
+			selfdes=0
+			return selfdes
+	return selfdes
+
+
+f=open(sys.argv[1])
+for line in f:
+	print selfdesc(int(line))
+			

@@ -1,0 +1,25 @@
+import sys
+
+beginning=1;
+prev=0;
+
+f=open(sys.argv[1]);
+
+for line in f:
+	lst=line.split(",")
+	for num in lst:
+		if(beginning==1):
+			sys.stdout.write("if case ")			
+			sys.stdout.write(num)
+			beginning=0
+			prev=num
+		else:
+			if(num==prev):
+				continue;
+			else:
+				sys.stdout.write("else case ")				
+				sys.stdout.write(",")
+				sys.stdout.write(num)
+				prev=num
+			
+	beginning=1

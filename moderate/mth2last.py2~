@@ -1,0 +1,12 @@
+import sys;
+
+f=open(sys.argv[1]);
+
+for line in f:
+	elements=line.split();
+	l=len(elements);
+	m=int(elements.pop());
+	if(m<l):
+		print elements[l-m-1];
+	else:
+		print;	

@@ -1,0 +1,11 @@
+import sys
+
+f=open(sys.argv[1]);
+
+for line in f:
+	words=line.split();
+	for w in reversed(words):
+		sys.stdout.write(w)
+		sys.stdout.write(" ")
+	print 
+f.close();

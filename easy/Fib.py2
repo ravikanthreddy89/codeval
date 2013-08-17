@@ -1,0 +1,25 @@
+import sys
+
+tn1=1;
+tn2=1;
+
+def n_th_fib(n):
+	nfib=0;
+	t1=tn1;
+	t2=tn2;
+	if(n==1):
+		return 1
+	if(n==0):
+		return 0
+	t=n-2;
+	while(t>0):
+		nfib=t1+t2;
+		t1=t2;
+		t2=nfib;
+		t=t-1;
+	return nfib
+
+f=open(sys.argv[1]);
+
+for line in f:
+	print n_th_fib(int(line))

@@ -1,0 +1,9 @@
+import sys;
+
+f=open(sys.argv[1]);
+
+for line in f:
+	l=line.split();
+	ln=len(l);
+	print l[ln-2];
+	

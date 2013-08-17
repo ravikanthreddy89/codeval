@@ -1,0 +1,8 @@
+import sys;
+
+set1={};
+set2={};
+
+f=open(sys.argv[1])
+for line in f:
+	print line

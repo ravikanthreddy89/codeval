@@ -1,0 +1,35 @@
+import sys
+
+def ssum(num):
+	total=0
+	while(num>0):
+		x=(num%10)
+		total= total+(x*x)
+		num=num/10
+	return total
+
+
+def happy(num):
+	flag=0
+	result={}
+	while(True):
+		num=ssum(num)
+		if(num==1):
+			flag=1;
+			return flag
+		elif(result.has_key(num)):
+			flag=0;
+			return flag
+		else:
+			result[num]=1
+
+
+
+
+f=open(sys.argv[1]);
+
+for line in f:
+	print happy(int(line))
+
+f.close();
+

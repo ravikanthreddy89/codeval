@@ -1,0 +1,23 @@
+import sys
+
+def amstrong(line):
+	num=int(line)
+	x=num;
+	digits=[]
+	count=0;
+ 	while(x>0):
+		digits.append(x%10)
+		x=x/10
+		count=count+1;
+	total=0
+	for number in digits:
+		total=total+ (number**count)
+	if(total==num):
+		return True
+	else:
+		return False
+
+f=open(sys.argv[1]);
+
+for line in f:
+	print amstrong(line)

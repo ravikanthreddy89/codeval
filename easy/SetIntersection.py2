@@ -1,0 +1,23 @@
+import sys;
+
+
+set1={};
+
+
+f=open(sys.argv[1])
+for line in f:
+	spl=line.split(";");
+        str1=spl[1].split(",")
+	str2=spl[2].split(",")
+	for item in str1:
+		set1[item]=1;
+	
+	result=[];
+	for item in str2:
+		if(set1.has_key(item)):
+			result.append(item)
+	print result
+	set1.clear()
+	
+	   
+	
