@@ -19,7 +19,6 @@ printf("error in opening the file");
 exit(1);
 }
 
-
 while(1){
 	c=fgets(x,1024,fp);
 	if(c==NULL) break;
@@ -36,19 +35,12 @@ while(1){
 		temp=temp+((x[i]-48)*pow(10,j));	
 			
 		}
-		else break;	
-		
+		else break;
 	}
 	// now iterate back and print mth last element
 	for(i=count-3;temp>0;i=i-2,temp--);
 	printf("i=%d  ",i);
 	printf("%c\n",x[i]);
-	
-	
 }
-
-
 close(fp);
-
-
 }// end of main function
