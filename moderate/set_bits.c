@@ -39,11 +39,8 @@ c=fgets(x,1024, fp);
 	if((num&1)==1) count=count+1;
 	num=num>>1;	
 	}
-	
 	printf("%d\n",count);
-
 }
-
 
 //close the file before exiting
 close(fp);
