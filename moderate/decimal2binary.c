@@ -38,12 +38,6 @@ c=fgets(x,1024,fp);
 		}
 	}
 	printf("\n");
-	
-
 }
-
-
 close(fp);
-
-
 }

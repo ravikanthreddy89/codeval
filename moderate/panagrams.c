@@ -16,16 +16,12 @@ if(fp==NULL) {
 printf("error in opening file");
 exit(1);
 }
-
 //reset the hashtable array
 	for(i=0;i<26;i++) hashtable[i]=0;
-
-
-
 //start reading from the file....
 while(1){
 	
-		c=fgets(x,1024,fp);
+	c=fgets(x,1024,fp);
 	if(c==NULL) break;
 
 	//process the line	
@@ -55,13 +51,7 @@ while(1){
 	printf("\n");
 
 }//end of while loop
-
-
 //close the file
 close(fp);
-
-
-
-
 return 0;
 }// end of main funciton
